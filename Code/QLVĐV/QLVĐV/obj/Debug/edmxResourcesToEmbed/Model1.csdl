@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VDVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DanhSach">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
+    <Property Name="QuocTich" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NoiSinh" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoDienThoai" Type="Int32" Nullable="false" />
+    <Property Name="MonTheThao" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ChucVu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="MonTheThao1" Relationship="Self.FK_DanhSach_MonTheThao1" FromRole="DanhSach" ToRole="MonTheThao" />
+    <NavigationProperty Name="ThanhTuu" Relationship="Self.FK_LichThiDau_DanhSach" FromRole="DanhSach" ToRole="ThanhTuu" />
+  </EntityType>
+  <EntityType Name="MonTheThao">
+    <Key>
+      <PropertyRef Name="MonTheThao1" />
+    </Key>
+    <Property Name="MonTheThao1" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SoLuongHT" Type="Int32" Nullable="false" />
+    <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="DanhSaches" Relationship="Self.FK_DanhSach_MonTheThao1" FromRole="MonTheThao" ToRole="DanhSach" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ThanhTuu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="HCV" Type="Int32" Nullable="false" />
+    <Property Name="HCB" Type="Int32" Nullable="false" />
+    <Property Name="HCD" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DanhSach" Relationship="Self.FK_LichThiDau_DanhSach" FromRole="ThanhTuu" ToRole="DanhSach" />
+  </EntityType>
+  <Association Name="FK_DanhSach_MonTheThao1">
+    <End Role="MonTheThao" Type="Self.MonTheThao" Multiplicity="1" />
+    <End Role="DanhSach" Type="Self.DanhSach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonTheThao">
+        <PropertyRef Name="MonTheThao1" />
+      </Principal>
+      <Dependent Role="DanhSach">
+        <PropertyRef Name="MonTheThao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LichThiDau_DanhSach">
+    <End Role="DanhSach" Type="Self.DanhSach" Multiplicity="1" />
+    <End Role="ThanhTuu" Type="Self.ThanhTuu" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DanhSach">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ThanhTuu">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VDVEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DanhSaches" EntityType="Self.DanhSach" />
+    <EntitySet Name="MonTheThaos" EntityType="Self.MonTheThao" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="ThanhTuus" EntityType="Self.ThanhTuu" />
+    <AssociationSet Name="FK_DanhSach_MonTheThao1" Association="Self.FK_DanhSach_MonTheThao1">
+      <End Role="MonTheThao" EntitySet="MonTheThaos" />
+      <End Role="DanhSach" EntitySet="DanhSaches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LichThiDau_DanhSach" Association="Self.FK_LichThiDau_DanhSach">
+      <End Role="DanhSach" EntitySet="DanhSaches" />
+      <End Role="ThanhTuu" EntitySet="ThanhTuus" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

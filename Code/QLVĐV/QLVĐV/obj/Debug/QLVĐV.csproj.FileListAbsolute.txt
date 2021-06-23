@@ -1,0 +1,22 @@
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\bin\Debug\QLVĐV.exe.config
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\bin\Debug\QLVĐV.exe
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\bin\Debug\QLVĐV.pdb
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\obj\Debug\QLVĐV.check.resources
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\obj\Debug\QLVĐV.Login.resources
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\obj\Debug\QLVĐV.Properties.Resources.resources
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\obj\Debug\QLVĐV.state.resources
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\obj\Debug\QLVĐV.csproj.GenerateResource.Cache
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\obj\Debug\QLVĐV.exe
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\obj\Debug\QLVĐV.pdb
+D:\TTNT_Cô Hà_ Nhóm 11\TTNT45K_HA_11\QLVĐV\QLVĐV\obj\Debug\QLVĐV.csprojResolveAssemblyReference.cache
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\bin\Debug\QLVĐV.exe.config
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\obj\Debug\QLVĐV.exe
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\obj\Debug\QLVĐV.pdb
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\bin\Debug\QLVĐV.exe
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\bin\Debug\QLVĐV.pdb
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\obj\Debug\QLVĐV.csprojResolveAssemblyReference.cache
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\obj\Debug\QLVĐV.check.resources
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\obj\Debug\QLVĐV.Login.resources
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\obj\Debug\QLVĐV.Properties.Resources.resources
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\obj\Debug\QLVĐV.state.resources
+C:\Users\OS\Desktop\Tài liệu học\TTNT-Kỳ hè năm 2\Code\QLVĐV\QLVĐV\obj\Debug\QLVĐV.csproj.GenerateResource.Cache

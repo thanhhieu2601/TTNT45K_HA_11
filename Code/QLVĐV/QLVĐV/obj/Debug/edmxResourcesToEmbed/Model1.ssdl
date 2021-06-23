@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VDVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DanhSach">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GioiTinh" Type="bit" Nullable="false" />
+    <Property Name="QuocTich" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="NgaySinh" Type="date" Nullable="false" />
+    <Property Name="NoiSinh" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="SoDienThoai" Type="int" Nullable="false" />
+    <Property Name="MonTheThao" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="ChucVu" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'VDV.dbo.Login' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Login">
+          <Property Name="TaiKhoan" Type="varchar" MaxLength="50" />
+          <Property Name="MatKhau" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="MonTheThao">
+    <Key>
+      <PropertyRef Name="MonTheThao" />
+    </Key>
+    <Property Name="MonTheThao" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="SoLuongHT" Type="int" Nullable="false" />
+    <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="ThanhTuu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="HCV" Type="int" Nullable="false" />
+    <Property Name="HCB" Type="int" Nullable="false" />
+    <Property Name="HCD" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_DanhSach_MonTheThao1">
+    <End Role="MonTheThao" Type="Self.MonTheThao" Multiplicity="1" />
+    <End Role="DanhSach" Type="Self.DanhSach" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonTheThao">
+        <PropertyRef Name="MonTheThao" />
+      </Principal>
+      <Dependent Role="DanhSach">
+        <PropertyRef Name="MonTheThao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LichThiDau_DanhSach">
+    <End Role="DanhSach" Type="Self.DanhSach" Multiplicity="1" />
+    <End Role="ThanhTuu" Type="Self.ThanhTuu" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DanhSach">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ThanhTuu">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VDVModelStoreContainer">
+    <EntitySet Name="DanhSach" EntityType="Self.DanhSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MonTheThao" EntityType="Self.MonTheThao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThanhTuu" EntityType="Self.ThanhTuu" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DanhSach_MonTheThao1" Association="Self.FK_DanhSach_MonTheThao1">
+      <End Role="MonTheThao" EntitySet="MonTheThao" />
+      <End Role="DanhSach" EntitySet="DanhSach" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LichThiDau_DanhSach" Association="Self.FK_LichThiDau_DanhSach">
+      <End Role="DanhSach" EntitySet="DanhSach" />
+      <End Role="ThanhTuu" EntitySet="ThanhTuu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

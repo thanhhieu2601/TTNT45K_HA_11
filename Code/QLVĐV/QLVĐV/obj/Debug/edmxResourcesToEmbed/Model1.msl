@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VDVModelStoreContainer" CdmEntityContainer="VDVEntities">
+    <EntitySetMapping Name="DanhSaches">
+      <EntityTypeMapping TypeName="VDVModel.DanhSach">
+        <MappingFragment StoreEntitySet="DanhSach">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="QuocTich" ColumnName="QuocTich" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="NoiSinh" ColumnName="NoiSinh" />
+          <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
+          <ScalarProperty Name="MonTheThao" ColumnName="MonTheThao" />
+          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonTheThaos">
+      <EntityTypeMapping TypeName="VDVModel.MonTheThao">
+        <MappingFragment StoreEntitySet="MonTheThao">
+          <ScalarProperty Name="MonTheThao1" ColumnName="MonTheThao" />
+          <ScalarProperty Name="SoLuongHT" ColumnName="SoLuongHT" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="VDVModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThanhTuus">
+      <EntityTypeMapping TypeName="VDVModel.ThanhTuu">
+        <MappingFragment StoreEntitySet="ThanhTuu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="HCV" ColumnName="HCV" />
+          <ScalarProperty Name="HCB" ColumnName="HCB" />
+          <ScalarProperty Name="HCD" ColumnName="HCD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

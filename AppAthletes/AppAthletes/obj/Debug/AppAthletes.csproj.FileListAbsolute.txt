@@ -1,0 +1,9 @@
+C:\Users\OS\Documents\GitHub\TTNT45K_HA_11\AppAthletes\AppAthletes\bin\Debug\AppAthletes.exe.config
+C:\Users\OS\Documents\GitHub\TTNT45K_HA_11\AppAthletes\AppAthletes\bin\Debug\AppAthletes.exe
+C:\Users\OS\Documents\GitHub\TTNT45K_HA_11\AppAthletes\AppAthletes\bin\Debug\AppAthletes.pdb
+C:\Users\OS\Documents\GitHub\TTNT45K_HA_11\AppAthletes\AppAthletes\obj\Debug\AppAthletes.csprojResolveAssemblyReference.cache
+C:\Users\OS\Documents\GitHub\TTNT45K_HA_11\AppAthletes\AppAthletes\obj\Debug\AppAthletes.Edit.resources
+C:\Users\OS\Documents\GitHub\TTNT45K_HA_11\AppAthletes\AppAthletes\obj\Debug\AppAthletes.Properties.Resources.resources
+C:\Users\OS\Documents\GitHub\TTNT45K_HA_11\AppAthletes\AppAthletes\obj\Debug\AppAthletes.csproj.GenerateResource.Cache
+C:\Users\OS\Documents\GitHub\TTNT45K_HA_11\AppAthletes\AppAthletes\obj\Debug\AppAthletes.exe
+C:\Users\OS\Documents\GitHub\TTNT45K_HA_11\AppAthletes\AppAthletes\obj\Debug\AppAthletes.pdb
